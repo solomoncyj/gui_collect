@@ -133,10 +133,8 @@ def get_popen_args(texture_filepath, temp_dir_filepath, max_width, width, height
             "point",
             "-resize",
             f"{width}x{height}",
-            "-channel",
-            "A",
-            "-negate",
-            "+channel",
+            "-alpha",
+            "off",
             str(temp_filepath.absolute()),
         ]
 
